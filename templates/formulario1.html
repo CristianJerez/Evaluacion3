@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario con estilo</title>
+    <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+<body>
+<div class="container">
+  <h2>Formulario de Notas:</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label>Nota 1:</label>
+            <input type="number" name="nota1" min="10" max="70">
+        </div>
+        <div class="form-group">
+            <label>Nota 2:</label>
+            <input type="number" name="nota2" min="10" max="70">
+        </div>
+        <div class="form-group">
+            <label>Nota 3:</label>
+            <input type="number" name="nota3" min="10" max="70">
+        </div>
+        <div class="form-group">
+            <label>Asistencia (%):</label>
+            <input type="number" name="asistencia" min="0" max="100">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+    {% if promedio and estado %}
+    <label>Promedio:{{ promedio }}</label>
+    <label>Estado: {{ estado }}</label>
+    {% endif %}
+</div>
+</body>
+</html>
